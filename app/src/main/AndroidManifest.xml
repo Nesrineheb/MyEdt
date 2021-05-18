@@ -8,7 +8,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyEdt">
+        android:theme="@style/Theme.MyEDTCustom">
+
+        <activity android:name=".EnseignantDetailActivity"></activity>
+        <activity android:name=".DetailSeanceActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
