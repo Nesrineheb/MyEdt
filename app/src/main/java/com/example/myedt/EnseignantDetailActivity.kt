@@ -32,7 +32,6 @@ class EnseignantDetailActivity : AppCompatActivity() {
 
         titreView.text=intent.getStringExtra("nom")
         gradeView.text=intent.getStringExtra("grade")
-
         enseignementView.text=intent.getStringExtra("ens")
 
 

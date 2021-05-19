@@ -12,6 +12,7 @@ class DetailSeanceActivity : AppCompatActivity() {
 
 
 
+
     lateinit var titreView: TextView
 
     lateinit var descriptionView: TextView
@@ -21,10 +22,7 @@ class DetailSeanceActivity : AppCompatActivity() {
     lateinit var enseignants: MutableList<Enseignant>
 
     companion object {
-
         val EXTRA_Seance = "seance"
-
-
     }
 
 
@@ -73,8 +71,9 @@ class DetailSeanceActivity : AppCompatActivity() {
 
         val extras:Bundle? =intent.extras
         if (extras != null) {
-            //enseignant= extras.getParcelable(EnseignantDetailActivity.EXTRA_Enseignant)!!
+
             seance= extras.getParcelable<Seance>(EXTRA_Seance)!!
+
         }
 
 
@@ -93,9 +92,12 @@ class DetailSeanceActivity : AppCompatActivity() {
         dateView.text = seance.date
         dureeView.text = seance.duree.toString()
 
+
+
         enseignantView.setOnClickListener(){
 
             intent = Intent(this, EnseignantDetailActivity::class.java)
+
             intent.putExtra(
                 "nom",
                 enseignants[seance.enseignantIndex].nom
